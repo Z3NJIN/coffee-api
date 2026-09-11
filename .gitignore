@@ -1,0 +1,25 @@
+# Gradle
+.gradle/
+build/
+!gradle/wrapper/gradle-wrapper.jar
+
+# IntelliJ IDEA
+.idea/
+*.iml
+*.iws
+out/
+
+# Archivos de sistema operativo
+.DS_Store
+Thumbs.db
+
+# Logs
+*.log
+
+# Variables de entorno locales (nunca subir credenciales)
+.env
+.env.local
+
+# H2 (si en algún momento se genera un archivo físico de base de datos)
+*.mv.db
+*.trace.db

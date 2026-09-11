@@ -1,0 +1,16 @@
+spring:
+  application:
+    name: coffee-api
+  profiles:
+    active: dev
+  jackson:
+    default-property-inclusion: non_null
+
+server:
+  port: 8080
+
+springdoc:
+  swagger-ui:
+    path: /swagger-ui.html
+  api-docs:
+    path: /api-docs

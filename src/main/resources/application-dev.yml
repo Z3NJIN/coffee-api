@@ -1,0 +1,31 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:coffeeapi
+    driver-class-name: org.h2.Driver
+    username: sa
+    password: ""
+  h2:
+    console:
+      enabled: true
+      path: /h2-console
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      hibernate:
+        format_sql: true
+
+logging:
+  level:
+    org.hibernate.SQL: debug
+
+# Alternativa: si prefieres probar contra Postgres local (ver docker-compose.yml),
+# reemplaza el bloque datasource de arriba por:
+#
+# spring:
+#   datasource:
+#     url: jdbc:postgresql://localhost:5432/coffeeapp
+#     username: coffeeapp
+#     password: coffeeapp
+#     driver-class-name: org.postgresql.Driver

@@ -1,0 +1,18 @@
+spring:
+  datasource:
+    url: ${DATABASE_URL}
+    username: ${DATABASE_USERNAME}
+    password: ${DATABASE_PASSWORD}
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: validate
+    show-sql: false
+
+logging:
+  level:
+    root: warn
+    com.marlon.coffeeapp: info
+
+# DATABASE_URL, DATABASE_USERNAME y DATABASE_PASSWORD se configuran como
+# variables de entorno en Railway/Render, nunca hardcodeadas en este archivo.
