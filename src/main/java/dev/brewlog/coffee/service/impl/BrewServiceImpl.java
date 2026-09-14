@@ -9,8 +9,8 @@ import dev.brewlog.coffee.model.Recipe;
 import dev.brewlog.coffee.repository.BrewRepository;
 import dev.brewlog.coffee.repository.RecipeRepository;
 import dev.brewlog.coffee.service.BrewService;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.time.LocalDateTime;
 import java.util.List;
@@ -54,7 +54,7 @@ public class BrewServiceImpl implements BrewService {
 
     @Override
     public List<BrewResponse> getByRecipeIdDesc(Long recipeId) {
-        return brewRepository.findByRecipeIdOrderByBrewedAtAsc(recipeId).stream()
+        return brewRepository.findByRecipeIdOrderByBrewedAtDesc(recipeId).stream()
                 .map(brewMapper::toResponse)
                 .toList();
     }

@@ -8,11 +8,10 @@ import dev.brewlog.coffee.model.BrewMethod;
 import dev.brewlog.coffee.model.Recipe;
 import dev.brewlog.coffee.repository.RecipeRepository;
 import dev.brewlog.coffee.service.RecipeService;
-import jakarta.transaction.Transactional;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.stream.Collectors;
 
 @Service
 public class RecipeServiceImpl implements RecipeService {
@@ -64,6 +63,7 @@ public class RecipeServiceImpl implements RecipeService {
     }
 
     @Override
+    @Transactional
     public void delete(Long id) {
         if (!recipeRepository.existsById(id)) {
             throw new ResourceNotFoundException("Recipe not found " + id);

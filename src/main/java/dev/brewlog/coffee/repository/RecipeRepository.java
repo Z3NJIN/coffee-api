@@ -8,5 +8,4 @@ import java.util.List;
 
 public interface RecipeRepository extends JpaRepository<Recipe, Long> {
     List<Recipe> findByMethod(BrewMethod method);
-//List<Recipe> findByCoffeeOriginId(Long coffeeOriginId);
 }
