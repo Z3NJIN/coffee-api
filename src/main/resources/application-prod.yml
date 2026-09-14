@@ -6,13 +6,13 @@ spring:
     driver-class-name: org.postgresql.Driver
   jpa:
     hibernate:
-      ddl-auto: validate
+      ddl-auto: update
     show-sql: false
 
 logging:
   level:
     root: warn
-    com.marlon.coffeeapp: info
+    dev.brewlog.coffee: info
 
 # DATABASE_URL, DATABASE_USERNAME y DATABASE_PASSWORD se configuran como
 # variables de entorno en Railway/Render, nunca hardcodeadas en este archivo.
